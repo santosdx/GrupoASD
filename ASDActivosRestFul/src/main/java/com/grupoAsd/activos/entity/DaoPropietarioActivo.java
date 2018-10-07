@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,8 +20,10 @@ import javax.persistence.TemporalType;
 public class DaoPropietarioActivo implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "propietario_activo_generador")
+    @SequenceGenerator(name="propietario_activo_generador", sequenceName = "sq_propietario_activo", allocationSize=1)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;

@@ -21,10 +21,10 @@ import javax.persistence.TemporalType;
 public class DaoActivo implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "activo_generador")
     @SequenceGenerator(name="activo_generador", sequenceName = "sq_activo", allocationSize=1)
-    @Id
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;

@@ -1,5 +1,7 @@
 package com.grupoAsd.activos.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,29 @@ public class ServicioPersona {
 	private PersonaRepositorio repoPersona;
 	@Autowired 
 	private ConvertidorDaoPersona convPersona;
-	
+
+
+	/**
+	 * Método que consulta en la base de datos todas las Persona
+	 * 
+	 * @return List-Persona
+	 */
+	public List<Persona> buscarTodosLasPersonas() {
+		List<Persona> respuesta = null;
+		try {
+			respuesta = convPersona.convertirDaoPersonasToPersonas(repoPersona.findAll());
+			return respuesta;
+		} catch (Exception e) {
+			logger.info(e.getMessage());
+			return respuesta;
+		}
+	}
+	/**
+	 * Método que consulta en la base de datos una Persona por su Id
+	 * 
+	 * @param id
+	 * @return Persona
+	 */
 	public Persona buscarPersonaById(Integer id) {
 		Persona respuesta = null;
 		try {

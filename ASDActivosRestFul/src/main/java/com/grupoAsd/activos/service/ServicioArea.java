@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.grupoAsd.activos.converter.ConvertidorDaoArea;
-import com.grupoAsd.activos.model.Activo;
 import com.grupoAsd.activos.model.Area;
 import com.grupoAsd.activos.repository.AreaRepositorio;
 

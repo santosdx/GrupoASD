@@ -14,7 +14,7 @@ public class ConvertidorDaoActivo {
 	/**
 	 * Método que convierte un objeto de tipo DaoActivo en un objeto Activo
 	 * @param activo
-	 * @return List-Activo
+	 * @return Activo
 	 */
 	public Activo convertirDaoActivoToActivo(DaoActivo activo) {
 		Activo resultado = new Activo(activo);

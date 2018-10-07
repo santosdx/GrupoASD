@@ -8,8 +8,13 @@ import com.grupoAsd.activos.model.PropietarioActivo;
 @Component
 public class ConvertidorDaoPropietarioActivo {
 
-	public PropietarioActivo convertirDaoPropietarioActivoToPropietarioActivo(DaoPropietarioActivo PropietarioActivo) {
-		PropietarioActivo resultado = new PropietarioActivo(PropietarioActivo);
+	/**
+	 * Método que convierte un objeto de tipo DaoPropietarioActivo en un objeto PropietarioActivo
+	 * @param propietarioActivo
+	 * @return PropietarioActivo
+	 */
+	public PropietarioActivo convertirDaoPropietarioActivoToPropietarioActivo(DaoPropietarioActivo propietarioActivo) {
+		PropietarioActivo resultado = new PropietarioActivo(propietarioActivo);
 		return resultado;
 	}
 }

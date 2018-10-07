@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -14,8 +15,10 @@ import javax.persistence.Table;
 public class DaoTipoActivo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tipo_activo_generador")
+    @SequenceGenerator(name="tipo_activo_generador", sequenceName = "sq_id_tipo_activo", allocationSize=1)
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
