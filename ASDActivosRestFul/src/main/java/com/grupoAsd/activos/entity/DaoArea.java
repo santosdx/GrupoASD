@@ -12,6 +12,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Clase que representa la entidad de base de datos Area.
+ * @author santos
+ *
+ */
 @Entity
 @Table(name = "\"Area\"")
 public class DaoArea implements Serializable {

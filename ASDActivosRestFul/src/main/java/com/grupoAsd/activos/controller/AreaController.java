@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.grupoAsd.activos.model.Area;
 import com.grupoAsd.activos.service.ServicioArea;
 
+/**
+ * Clase que describe los servicios de controlador para con las interfaces de
+ * negocio para el objeto Area y permite definir los servicios rest.
+ * 
+ * @author santos
+ *
+ */
 @RestController
 public class AreaController {
 

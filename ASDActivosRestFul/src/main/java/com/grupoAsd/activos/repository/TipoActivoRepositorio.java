@@ -7,6 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import com.grupoAsd.activos.entity.DaoTipoActivo;
 
+/**
+ * Clase que se encarga de gestionar todas las operaciones de persistencia de la
+ * tabla Tipo_Activo, para con la base de datos.
+ * 
+ * @author santos
+ *
+ */
 @Repository
 public interface TipoActivoRepositorio extends JpaRepository<DaoTipoActivo, Serializable>{
 

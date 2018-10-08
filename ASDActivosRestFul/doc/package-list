@@ -1,0 +1,7 @@
+com.grupoAsd.activos
+com.grupoAsd.activos.controller
+com.grupoAsd.activos.converter
+com.grupoAsd.activos.entity
+com.grupoAsd.activos.model
+com.grupoAsd.activos.repository
+com.grupoAsd.activos.service

@@ -2,6 +2,13 @@ package com.grupoAsd.activos.model;
 
 import com.grupoAsd.activos.entity.DaoArea;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * Area.
+ * 
+ * @author santos
+ *
+ */
 public class Area {
 
 	private Integer id;

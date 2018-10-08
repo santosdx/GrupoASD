@@ -12,6 +12,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Clase que representa la entidad de base de datos Persona.
+ * @author santos
+ *
+ */
 @Entity
 @Table(name = "\"Persona\"")
 public class DaoPersona implements Serializable {

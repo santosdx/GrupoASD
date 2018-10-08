@@ -2,6 +2,13 @@ package com.grupoAsd.activos.model;
 
 import com.grupoAsd.activos.entity.DaoTipoActivo;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * TipoActivo.
+ * 
+ * @author santos
+ *
+ */
 public class TipoActivo {
 
 	private Integer id;

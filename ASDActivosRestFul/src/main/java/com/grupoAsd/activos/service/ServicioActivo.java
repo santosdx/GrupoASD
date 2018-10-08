@@ -18,6 +18,13 @@ import com.grupoAsd.activos.model.TipoActivo;
 import com.grupoAsd.activos.repository.ActivoRepositorio;
 import com.grupoAsd.activos.repository.EstadoActivoRepositorio;
 
+/**
+ * Clase que inyecta de la capa de repositorio de la tabla Activo, para permitir
+ * implementar los metodos a nivel de capa de servicio.
+ * 
+ * @author santos
+ *
+ */
 @Service
 public class ServicioActivo {
 
@@ -27,7 +34,7 @@ public class ServicioActivo {
 	private ActivoRepositorio repoActivo;
 	@Autowired
 	private ConvertidorDaoActivo convActivo;
-	
+
 	@Autowired
 	private EstadoActivoRepositorio repoEstadoActivo;
 
@@ -134,7 +141,8 @@ public class ServicioActivo {
 	}
 
 	/**
-	 * Método que permite editar el atributo serial a una entidad de tipo Activo en la base de datos
+	 * Método que permite editar el atributo serial a una entidad de tipo Activo en
+	 * la base de datos
 	 * 
 	 * @param id
 	 * @param serial
@@ -144,7 +152,7 @@ public class ServicioActivo {
 		Activo respuesta = null;
 		try {
 			DaoActivo activoEditar = repoActivo.findById(id);
-			if(activoEditar != null) {
+			if (activoEditar != null) {
 				activoEditar.setSerial(serial);
 				respuesta = convActivo.convertirDaoActivoToActivo(repoActivo.save(activoEditar));
 			}
@@ -154,9 +162,10 @@ public class ServicioActivo {
 			return respuesta;
 		}
 	}
-	
+
 	/**
-	 * Método que permite editar el atributo fecha_baja a una entidad de tipo Activo en la base de datos
+	 * Método que permite editar el atributo fecha_baja a una entidad de tipo Activo
+	 * en la base de datos
 	 * 
 	 * @param id
 	 * @param fechaBaja
@@ -166,9 +175,9 @@ public class ServicioActivo {
 		Activo respuesta = null;
 		try {
 			DaoActivo activoEditar = repoActivo.findById(id);
-			if(activoEditar != null) {
-				//logger.info(activoEditar.getFechaCompra() + " --- " + fechaBaja);
-				if(activoEditar.getFechaCompra().before(fechaBaja)) {
+			if (activoEditar != null) {
+				// logger.info(activoEditar.getFechaCompra() + " --- " + fechaBaja);
+				if (activoEditar.getFechaCompra().before(fechaBaja)) {
 					activoEditar.setFechaBaja(fechaBaja);
 					activoEditar.setIdEstadoActivo(repoEstadoActivo.findById(3));
 					respuesta = convActivo.convertirDaoActivoToActivo(repoActivo.save(activoEditar));
@@ -180,9 +189,10 @@ public class ServicioActivo {
 			return respuesta;
 		}
 	}
-	
+
 	/**
 	 * Método que permite eliminar una entidad de tipo Activo en la base de datos
+	 * 
 	 * @param id
 	 * @return true-false
 	 */

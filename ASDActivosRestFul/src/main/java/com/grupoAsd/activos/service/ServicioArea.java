@@ -11,6 +11,13 @@ import com.grupoAsd.activos.converter.ConvertidorDaoArea;
 import com.grupoAsd.activos.model.Area;
 import com.grupoAsd.activos.repository.AreaRepositorio;
 
+/**
+ * Clase que inyecta de la capa de repositorio de la tabla Area, para permitir
+ * implementar los metodos a nivel de capa de servicio.
+ * 
+ * @author santos
+ *
+ */
 @Service
 public class ServicioArea {
 	

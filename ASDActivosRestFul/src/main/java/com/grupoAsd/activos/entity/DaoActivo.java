@@ -16,6 +16,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * Clase que representa la entidad de base de datos Activo.
+ * @author santos
+ *
+ */
 @Entity
 @Table(name = "\"Activo\"")
 public class DaoActivo implements Serializable {

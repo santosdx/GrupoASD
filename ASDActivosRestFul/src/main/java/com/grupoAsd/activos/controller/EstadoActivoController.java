@@ -9,6 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.grupoAsd.activos.model.EstadoActivo;
 import com.grupoAsd.activos.service.ServicioEstadoActivo;
 
+/**
+ * Clase que describe los servicios de controlador para con las interfaces de
+ * negocio para el objeto EstadoActivo y permite definir los servicios rest.
+ * 
+ * @author santos
+ *
+ */
 @RestController
 public class EstadoActivoController {
 

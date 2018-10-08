@@ -5,6 +5,13 @@ import java.util.Date;
 
 import com.grupoAsd.activos.entity.DaoActivo;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * Activo.
+ * 
+ * @author santos
+ *
+ */
 public class Activo {
 
 	private Integer id;
@@ -42,8 +49,8 @@ public class Activo {
 		this.idTipoActivo = new TipoActivo(activo.getIdTipoActivo());
 	}
 
-	public Activo(Integer id, String serial, String nombre, String descripcion, BigInteger valorCompra, Date fechaCompra,
-			Date fechaBaja, Integer peso, String color, Integer alto, Integer ancho, Integer largo,
+	public Activo(Integer id, String serial, String nombre, String descripcion, BigInteger valorCompra,
+			Date fechaCompra, Date fechaBaja, Integer peso, String color, Integer alto, Integer ancho, Integer largo,
 			EstadoActivo idEstadoActivo, TipoActivo idTipoActivo) {
 		this.id = id;
 		this.serial = serial;

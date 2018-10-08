@@ -8,6 +8,13 @@ import org.springframework.stereotype.Repository;
 import com.grupoAsd.activos.entity.DaoActivo;
 import com.grupoAsd.activos.entity.DaoPropietarioActivo;
 
+/**
+ * Clase que se encarga de gestionar todas las operaciones de persistencia de la
+ * tabla Propietario_Activo, para con la base de datos.
+ * 
+ * @author santos
+ *
+ */
 @Repository
 public interface PropietarioActivoRepositorio extends JpaRepository<DaoPropietarioActivo, Serializable>{
 

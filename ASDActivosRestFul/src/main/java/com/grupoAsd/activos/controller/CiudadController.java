@@ -9,6 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.grupoAsd.activos.model.Ciudad;
 import com.grupoAsd.activos.service.ServicioCiudad;
 
+/**
+ * Clase que describe los servicios de controlador para con las interfaces de
+ * negocio para el objeto Ciudad y permite definir los servicios rest.
+ * 
+ * @author santos
+ *
+ */
 @RestController
 public class CiudadController {
 

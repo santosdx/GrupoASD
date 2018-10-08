@@ -4,6 +4,13 @@ import java.util.Date;
 
 import com.grupoAsd.activos.entity.DaoPropietarioActivo;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * PropietarioActivo.
+ * 
+ * @author santos
+ *
+ */
 public class PropietarioActivo {
 
 	private Integer id;

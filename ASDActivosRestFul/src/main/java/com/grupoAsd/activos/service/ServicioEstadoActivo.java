@@ -9,6 +9,13 @@ import com.grupoAsd.activos.converter.ConvertidorDaoEstadoActivo;
 import com.grupoAsd.activos.model.EstadoActivo;
 import com.grupoAsd.activos.repository.EstadoActivoRepositorio;
 
+/**
+ * Clase que inyecta de la capa de repositorio de la tabla Estado_Activo, para permitir
+ * implementar los metodos a nivel de capa de servicio.
+ * 
+ * @author santos
+ *
+ */
 @Service
 public class ServicioEstadoActivo {
 	

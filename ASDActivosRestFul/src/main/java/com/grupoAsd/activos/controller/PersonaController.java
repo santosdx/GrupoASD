@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.grupoAsd.activos.model.Persona;
 import com.grupoAsd.activos.service.ServicioPersona;
 
+/**
+ * Clase que describe los servicios de controlador para con las interfaces de
+ * negocio para el objeto Persona y permite definir los servicios rest.
+ * 
+ * @author santos
+ *
+ */
 @RestController
 public class PersonaController {
 

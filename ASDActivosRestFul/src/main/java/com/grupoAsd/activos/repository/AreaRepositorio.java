@@ -8,6 +8,13 @@ import org.springframework.stereotype.Repository;
 
 import com.grupoAsd.activos.entity.DaoArea;
 
+/**
+ * Clase que se encarga de gestionar todas las operaciones de persistencia de la
+ * tabla Area, para con la base de datos.
+ * 
+ * @author santos
+ *
+ */
 @Repository
 public interface AreaRepositorio extends JpaRepository<DaoArea, Serializable>{
 

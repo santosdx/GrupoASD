@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Clase que representa la entidad de base de datos Estado_Activo.
+ * @author santos
+ *
+ */
 @Entity
 @Table(name = "\"Estado_Activo\"")
 public class DaoEstadoActivo implements Serializable {

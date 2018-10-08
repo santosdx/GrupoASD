@@ -5,6 +5,12 @@ import org.springframework.stereotype.Component;
 import com.grupoAsd.activos.entity.DaoPropietarioActivo;
 import com.grupoAsd.activos.model.PropietarioActivo;
 
+/**
+ * Clase que permite realizar las conversiones de datos de tipo DaoPropietarioActivo a PropietarioActivo.
+ * 
+ * @author santos
+ *
+ */
 @Component
 public class ConvertidorDaoPropietarioActivo {
 

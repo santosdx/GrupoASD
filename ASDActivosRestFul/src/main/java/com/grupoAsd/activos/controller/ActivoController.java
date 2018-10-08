@@ -22,6 +22,13 @@ import com.grupoAsd.activos.entity.DaoTipoActivo;
 import com.grupoAsd.activos.model.Activo;
 import com.grupoAsd.activos.service.ServicioActivo;
 
+/**
+ * Clase que describe los servicios de controlador para con las interfaces de
+ * negocio para el objeto Activo y permite definir los servicios rest.
+ * 
+ * @author santos
+ *
+ */
 @RestController
 public class ActivoController {
 
@@ -29,15 +36,20 @@ public class ActivoController {
 	private ServicioActivo servActivo;
 
 	/**
-	 * Servicio rest que consulta en la base de datos todos los registros de los Activos, retornando una lista.
+	 * Servicio rest que consulta en la base de datos todos los registros de los
+	 * Activos, retornando una lista.
+	 * 
 	 * @return List-Activo
 	 */
 	@RequestMapping(value = "/activos", method = RequestMethod.GET, produces = "application/json")
 	public List<Activo> getAllActivo() {
 		return servActivo.buscarTodosLosActivos();
 	}
+
 	/**
-	 * Servicio rest que consulta en la base de datos un Activo por su Id y retorna un Json con la información del Actio.
+	 * Servicio rest que consulta en la base de datos un Activo por su Id y retorna
+	 * un Json con la información del Actio.
+	 * 
 	 * @param id
 	 * @return Activo
 	 */
@@ -45,8 +57,11 @@ public class ActivoController {
 	public Activo getActivoById(@PathVariable Integer id) {
 		return servActivo.buscarActivoById(id);
 	}
+
 	/**
-	 * Servicio rest que consulta en la base de datos un Activo por su Id_Tipo (llave de la tabla tipo_activo) y retorna una lista de Activos. 
+	 * Servicio rest que consulta en la base de datos un Activo por su Id_Tipo
+	 * (llave de la tabla tipo_activo) y retorna una lista de Activos.
+	 * 
 	 * @param id
 	 * @return List-Activo
 	 */
@@ -63,6 +78,7 @@ public class ActivoController {
 
 	/**
 	 * Servicio rest que permite crear un nuevo Activo en la base de datos.
+	 * 
 	 * @param activo
 	 * @return Activo
 	 */
@@ -70,8 +86,10 @@ public class ActivoController {
 	public Activo createActivo(@RequestBody @Valid DaoActivo activo) {
 		return servActivo.crear(activo);
 	}
+
 	/**
 	 * Servicio rest que permite editar un Activo en la base de datos.
+	 * 
 	 * @param activo
 	 * @return Activo
 	 */
@@ -79,8 +97,11 @@ public class ActivoController {
 	public Activo editActivo(@RequestBody @Valid DaoActivo activo) {
 		return servActivo.editar(activo);
 	}
+
 	/**
-	 * Servicio rest que permite editar el atributo serial un Activo en la base de datos.
+	 * Servicio rest que permite editar el atributo serial un Activo en la base de
+	 * datos.
+	 * 
 	 * @param activo
 	 * @return Activo
 	 */
@@ -88,17 +109,23 @@ public class ActivoController {
 	public Activo editSerialActivo(@PathVariable Integer id, @PathVariable String serial) {
 		return servActivo.editarSerialAcivoById(id, serial);
 	}
+
 	/**
-	 * Servicio rest que permite editar el atributo serial un Activo en la base de datos.
+	 * Servicio rest que permite editar el atributo serial un Activo en la base de
+	 * datos.
+	 * 
 	 * @param activo
 	 * @return Activo
 	 */
 	@PostMapping(value = "/activo/editar/fecha_baja/{id}/{fecha_baja}", produces = "application/json")
-	public Activo editFechaBajaActivo(@PathVariable Integer id, @PathVariable @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss") Date fecha_baja) {
+	public Activo editFechaBajaActivo(@PathVariable Integer id,
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") Date fecha_baja) {
 		return servActivo.editarFechaBajaAcivoById(id, fecha_baja);
 	}
+
 	/**
 	 * Servicio rest que permite eliminar un Activo en la base de datos.
+	 * 
 	 * @param id
 	 * @return true-false
 	 */

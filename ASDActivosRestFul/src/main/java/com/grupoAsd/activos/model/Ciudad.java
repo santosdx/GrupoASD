@@ -2,6 +2,13 @@ package com.grupoAsd.activos.model;
 
 import com.grupoAsd.activos.entity.DaoCiudad;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * Ciudad.
+ * 
+ * @author santos
+ *
+ */
 public class Ciudad {
 
 	private Integer id;

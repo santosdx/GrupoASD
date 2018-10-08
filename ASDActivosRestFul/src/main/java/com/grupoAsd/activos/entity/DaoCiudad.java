@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Clase que representa la entidad de base de datos Ciudad.
+ * @author santos
+ *
+ */
 @Entity
 @Table(name = "\"Ciudad\"")
 public class DaoCiudad implements Serializable {

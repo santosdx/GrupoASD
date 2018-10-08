@@ -8,6 +8,12 @@ import org.springframework.stereotype.Component;
 import com.grupoAsd.activos.entity.DaoPersona;
 import com.grupoAsd.activos.model.Persona;
 
+/**
+ * Clase que permite realizar las conversiones de datos de tipo DaoPersona a Persona.
+ * 
+ * @author santos
+ *
+ */
 @Component
 public class ConvertidorDaoPersona {
 

@@ -9,6 +9,13 @@ import com.grupoAsd.activos.converter.ConvertidorDaoTipoActivo;
 import com.grupoAsd.activos.model.TipoActivo;
 import com.grupoAsd.activos.repository.TipoActivoRepositorio;
 
+/**
+ * Clase que inyecta de la capa de repositorio de la tabla Tipo_Activo, para permitir
+ * implementar los metodos a nivel de capa de servicio.
+ * 
+ * @author santos
+ *
+ */
 @Service
 public class ServicioTipoActivo {
 	

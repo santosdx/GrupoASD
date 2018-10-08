@@ -9,6 +9,13 @@ import com.grupoAsd.activos.converter.ConvertidorDaoCiudad;
 import com.grupoAsd.activos.model.Ciudad;
 import com.grupoAsd.activos.repository.CiudadRepositorio;
 
+/**
+ * Clase que inyecta de la capa de repositorio de la tabla Ciudad, para permitir
+ * implementar los metodos a nivel de capa de servicio.
+ * 
+ * @author santos
+ *
+ */
 @Service
 public class ServicioCiudad {
 

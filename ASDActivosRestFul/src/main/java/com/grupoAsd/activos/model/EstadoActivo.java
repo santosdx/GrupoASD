@@ -2,6 +2,13 @@ package com.grupoAsd.activos.model;
 
 import com.grupoAsd.activos.entity.DaoEstadoActivo;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * EstadoActivo.
+ * 
+ * @author santos
+ *
+ */
 public class EstadoActivo {
 
 	private Integer id;

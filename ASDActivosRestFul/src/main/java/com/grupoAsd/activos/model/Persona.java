@@ -2,6 +2,13 @@ package com.grupoAsd.activos.model;
 
 import com.grupoAsd.activos.entity.DaoPersona;
 
+/**
+ * Clase que represente a nivel de modelo de datos de aplicación el objeto
+ * Persona.
+ * 
+ * @author santos
+ *
+ */
 public class Persona{
 
     private Integer id;
