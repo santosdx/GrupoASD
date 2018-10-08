@@ -77,6 +77,30 @@ public class ActivoController {
 	}
 
 	/**
+	 * Servicio rest que consulta en la base de datos un Activo por su serial
+	 * y retorna una lista de Activos.
+	 * 
+	 * @param serial
+	 * @return List-Activo
+	 */
+	@GetMapping(value = "/activo/serial/{serial}", produces = "application/json")
+	public List<Activo> getActivosBySerial(@PathVariable String serial) {
+		return servActivo.buscarActivosBySerial(serial);
+	}
+
+	/**
+	 * Servicio rest que consulta en la base de datos un Activo por su fecha de compra
+	 * y retorna una lista de Activos.
+	 * 
+	 * @param fecha_compra
+	 * @return List-Activo
+	 */
+	@GetMapping(value = "/activo/fecha_compra/{fecha_compra}", produces = "application/json")
+	public List<Activo> getActivosByFechaCompra(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fecha_compra) {
+		return servActivo.buscarActivosByFechaCompra(fecha_compra);
+	}
+	
+	/**
 	 * Servicio rest que permite crear un nuevo Activo en la base de datos.
 	 * 
 	 * @param activo

@@ -88,13 +88,48 @@ public class ServicioActivo {
 			return respuesta;
 		}
 	}
+	
+	/**
+	 * Método que consulta en la base de datos un Activo por su Serial
+	 * 
+	 * @param serial
+	 * @return Activo
+	 */
+	public List<Activo> buscarActivosBySerial(String serial) {
+		List<Activo> respuesta = null;
+		try {
+			respuesta = convActivo.convertirDaoActivosToActivos(repoActivo.buscarBySerial(serial));
+			return respuesta;
+		} catch (Exception e) {
+			logger.info(e.getMessage());
+			return respuesta;
+		}
+	}
 
+	/**
+	 * Método que consulta en la base de datos un Activo por su Fecha de Compra
+	 * 
+	 * @param fecha_compra
+	 * @return Activo
+	 */
+	public List<Activo> buscarActivosByFechaCompra(Date fecha_compra) {
+		List<Activo> respuesta = null;
+		try {
+			respuesta = convActivo.convertirDaoActivosToActivos(repoActivo.buscarByFechaCompra(fecha_compra));
+			return respuesta;
+		} catch (Exception e) {
+			logger.info(e.getMessage());
+			return respuesta;
+		}
+	}
+	
 	/**
 	 * Método que consulta en la base de datos un Activo por su Tipo
 	 * 
 	 * @param id
 	 * @return Activo
 	 */
+	@Deprecated
 	public List<Activo> buscarActivosByTipo(DaoTipoActivo tipo) {
 		List<Activo> respuesta = null;
 		try {

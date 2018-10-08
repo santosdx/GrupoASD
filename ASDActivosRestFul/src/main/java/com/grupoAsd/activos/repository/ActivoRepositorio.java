@@ -1,6 +1,7 @@
 package com.grupoAsd.activos.repository;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -53,6 +54,25 @@ public interface ActivoRepositorio extends JpaRepository<DaoActivo, Serializable
 	 */
 	@Query(value = "SELECT a.* FROM \"Activo\" a WHERE a.id_tipo_activo = :tipo", nativeQuery = true)
 	public abstract List<DaoActivo> buscarByTipo(@Param("tipo") Integer tipo);
+
+	/**
+	 * Método que consulta en la base de datos un Activo por su Serial
+	 * 
+	 * @param serial
+	 * @return DaoActivo
+	 */
+	@Query(value = "SELECT a.* FROM \"Activo\" a WHERE upper(a.serial) = upper(:serial)", nativeQuery = true)
+	public abstract List<DaoActivo> buscarBySerial(@Param("serial") String serial);
+
+	/**
+	 * Método que consulta en la base de datos un Activo por su Fecha de Compra
+	 * 
+	 * @param fecha_compra
+	 * @return DaoActivo
+	 */
+	@Query(value = "SELECT a.* FROM \"Activo\" a WHERE a.fecha_compra = :fechaCompra", nativeQuery = true)
+	public abstract List<DaoActivo> buscarByFechaCompra(@Param("fechaCompra") Date fecha_compra);
+	
 
 	/**
 	 * Método que permite crear un nueva entidad de tipo Activo en la base de datos
